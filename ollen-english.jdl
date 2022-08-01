@@ -1,0 +1,71 @@
+
+application {
+  config {
+    baseName ollen,
+    applicationType monolith,
+    packageName com.pucminas.piol.ollen,
+    authenticationType jwt,
+    prodDatabaseType mysql,
+    clientFramework angular,
+    buildTool gradle,
+    cacheProvider no,
+    languages [pt-br, en],
+    nativeLanguage pt-br
+  }
+  entities *
+}
+
+entity User {
+	name String
+    login String
+    password String
+    type UserType
+}
+
+enum UserType {
+	CUSTOMER,
+    PRODUCER
+}
+
+entity Address {
+	street String
+    number Integer
+    district String
+    city String
+    state String
+    zipcode String
+}
+
+entity Product {
+	name String
+    description String
+    price Double
+    stock Integer
+    image String
+}
+
+entity Review {
+	score Double
+    comment String
+}
+
+entity Order {
+	date Instant
+    amount Double
+}
+
+relationship OneToOne {
+	Address{user} to User
+}
+
+relationship ManyToOne {
+	Product{producer} to User
+}
+
+relationship ManyToMany {
+	Product to Order
+}
+
+relationship ManyToOne {
+	Review to Product
+}

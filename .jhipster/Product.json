@@ -1,0 +1,56 @@
+{
+  "applications": ["ollen"],
+  "changelogDate": "20220801224643",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "product",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "price",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "stock",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "image",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Product",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "producer",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "order",
+      "otherEntityRelationshipName": "product",
+      "ownerSide": true,
+      "relationshipName": "order",
+      "relationshipType": "many-to-many"
+    },
+    {
+      "otherEntityName": "review",
+      "otherEntityRelationshipName": "product",
+      "relationshipName": "review",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "no"
+}

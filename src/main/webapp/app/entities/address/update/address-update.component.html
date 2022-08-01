@@ -1,0 +1,77 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-address-heading" data-cy="AddressCreateUpdateHeading" jhiTranslate="ollenApp.address.home.createOrEditLabel">
+        Create or edit a Address
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.street" for="field_street">Street</label>
+          <input type="text" class="form-control" name="street" id="field_street" data-cy="street" formControlName="street" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.number" for="field_number">Number</label>
+          <input type="number" class="form-control" name="number" id="field_number" data-cy="number" formControlName="number" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.district" for="field_district">District</label>
+          <input type="text" class="form-control" name="district" id="field_district" data-cy="district" formControlName="district" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.city" for="field_city">City</label>
+          <input type="text" class="form-control" name="city" id="field_city" data-cy="city" formControlName="city" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.state" for="field_state">State</label>
+          <input type="text" class="form-control" name="state" id="field_state" data-cy="state" formControlName="state" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.zipcode" for="field_zipcode">Zipcode</label>
+          <input type="text" class="form-control" name="zipcode" id="field_zipcode" data-cy="zipcode" formControlName="zipcode" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.address.user" for="field_user">User</label>
+          <select class="form-control" id="field_user" data-cy="user" name="user" formControlName="user">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="userOption.id === editForm.get('user')!.value?.id ? editForm.get('user')!.value : userOption"
+              *ngFor="let userOption of usersSharedCollection; trackBy: trackUserById"
+            >
+              {{ userOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

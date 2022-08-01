@@ -1,0 +1,31 @@
+{
+  "applications": ["ollen"],
+  "changelogDate": "20220801224743",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "review",
+  "fields": [
+    {
+      "fieldName": "score",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "comment",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Review",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "review",
+      "relationshipName": "product",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

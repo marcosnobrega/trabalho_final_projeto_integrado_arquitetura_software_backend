@@ -1,0 +1,48 @@
+{
+  "applications": ["ollen"],
+  "changelogDate": "20220801224543",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "address",
+  "fields": [
+    {
+      "fieldName": "street",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "number",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "district",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "city",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "state",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "zipcode",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Address",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "user",
+      "otherEntityRelationshipName": "address",
+      "ownerSide": true,
+      "relationshipName": "user",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

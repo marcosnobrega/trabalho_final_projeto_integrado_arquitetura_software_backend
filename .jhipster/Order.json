@@ -1,0 +1,32 @@
+{
+  "applications": ["ollen"],
+  "changelogDate": "20220801224843",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "jhi_order",
+  "fields": [
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "amount",
+      "fieldType": "Double"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Order",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "product",
+      "otherEntityRelationshipName": "order",
+      "ownerSide": false,
+      "relationshipName": "product",
+      "relationshipType": "many-to-many"
+    }
+  ],
+  "service": "no"
+}

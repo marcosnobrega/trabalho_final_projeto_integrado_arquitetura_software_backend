@@ -1,0 +1,91 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-product-heading" data-cy="ProductCreateUpdateHeading" jhiTranslate="ollenApp.product.home.createOrEditLabel">
+        Create or edit a Product
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.product.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.product.description" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.product.price" for="field_price">Price</label>
+          <input type="number" class="form-control" name="price" id="field_price" data-cy="price" formControlName="price" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.product.stock" for="field_stock">Stock</label>
+          <input type="number" class="form-control" name="stock" id="field_stock" data-cy="stock" formControlName="stock" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.product.image" for="field_image">Image</label>
+          <input type="text" class="form-control" name="image" id="field_image" data-cy="image" formControlName="image" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="ollenApp.product.producer" for="field_producer">Producer</label>
+          <select class="form-control" id="field_producer" data-cy="producer" name="producer" formControlName="producer">
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="userOption.id === editForm.get('producer')!.value?.id ? editForm.get('producer')!.value : userOption"
+              *ngFor="let userOption of usersSharedCollection; trackBy: trackUserById"
+            >
+              {{ userOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label jhiTranslate="ollenApp.product.order" for="field_orders">Order</label>
+          <select class="form-control" id="field_orders" data-cy="order" multiple name="orders" formControlName="orders">
+            <option
+              [ngValue]="getSelectedOrder(orderOption, editForm.get('orders')!.value)"
+              *ngFor="let orderOption of ordersSharedCollection; trackBy: trackOrderById"
+            >
+              {{ orderOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
