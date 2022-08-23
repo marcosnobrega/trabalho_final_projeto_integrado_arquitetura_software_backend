@@ -51,7 +51,7 @@
     "messages": {
       "info": {
         "authenticated": {
-          "prefix": "Se deseja ",
+          "prefix": "Clique para ",
           "link": "entrar",
           "suffix": ", utilize as seguintes contas padrões:<br/>- Administrador (usuário=\"admin\" and senha=\"admin\") <br/>- Usuário (usuário=\"user\" e senha=\"user\")."
         },
@@ -141,5 +141,5 @@
       "not.image": "File was expected to be an image but was found to be \"{{ fileType }}\""
     }
   },
-  "footer": "Este é o rodapé da página"
+  "footer": "Ollen @2022"
 }

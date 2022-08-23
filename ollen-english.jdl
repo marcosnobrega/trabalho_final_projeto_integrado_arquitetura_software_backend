@@ -10,7 +10,8 @@ application {
     buildTool gradle,
     cacheProvider no,
     languages [pt-br, en],
-    nativeLanguage pt-br
+    nativeLanguage pt-br,
+    devDatabaseType mysql
   }
   entities *
 }
