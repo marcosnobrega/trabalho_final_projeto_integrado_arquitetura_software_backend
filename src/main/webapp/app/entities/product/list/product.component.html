@@ -39,7 +39,6 @@
           <th scope="col"><span jhiTranslate="ollenApp.product.stock">Stock</span></th>
           <th scope="col"><span jhiTranslate="ollenApp.product.image">Image</span></th>
           <th scope="col"><span jhiTranslate="ollenApp.product.producer">Producer</span></th>
-          <th scope="col"><span jhiTranslate="ollenApp.product.order">Order</span></th>
           <th scope="col"></th>
         </tr>
       </thead>
@@ -52,15 +51,9 @@
           <td>{{ product.description }}</td>
           <td>{{ product.price }}</td>
           <td>{{ product.stock }}</td>
-          <td>{{ product.image }}</td>
+          <td><img [src]="product.image" height="100"></td>
           <td>
-            {{ product.producer?.id }}
-          </td>
-          <td>
-            <span *ngFor="let order of product.orders; let last = last">
-              <a class="form-control-static" [routerLink]="['/order', order.id, 'view']">{{ order.id }}</a
-              >{{ last ? '' : ', ' }}
-            </span>
+            {{ product.producer?.firstName }}
           </td>
           <td class="text-end">
             <div class="btn-group">

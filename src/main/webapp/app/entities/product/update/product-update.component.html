@@ -1,5 +1,5 @@
 <div class="d-flex justify-content-center">
-  <div class="col-8">
+  <div class="col-5">
     <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
       <h2 id="jhi-product-heading" data-cy="ProductCreateUpdateHeading" jhiTranslate="ollenApp.product.home.createOrEditLabel">
         Create or edit a Product
@@ -53,19 +53,7 @@
               [ngValue]="userOption.id === editForm.get('producer')!.value?.id ? editForm.get('producer')!.value : userOption"
               *ngFor="let userOption of usersSharedCollection; trackBy: trackUserById"
             >
-              {{ userOption.id }}
-            </option>
-          </select>
-        </div>
-
-        <div class="row mb-3">
-          <label jhiTranslate="ollenApp.product.order" for="field_orders">Order</label>
-          <select class="form-control" id="field_orders" data-cy="order" multiple name="orders" formControlName="orders">
-            <option
-              [ngValue]="getSelectedOrder(orderOption, editForm.get('orders')!.value)"
-              *ngFor="let orderOption of ordersSharedCollection; trackBy: trackOrderById"
-            >
-              {{ orderOption.id }}
+              {{ userOption.firstName }}
             </option>
           </select>
         </div>

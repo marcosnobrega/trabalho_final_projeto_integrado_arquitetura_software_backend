@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "Ollen",
+    "title": "Øllen",
     "browsehappy": "Você está usando um navegador <strong>desatualizado</strong>. Favor <a href=\"http://browsehappy.com/?locale=pt_BR\">atualize o seu navegador</a> para ter uma experiência melhor.",
     "menu": {
       "home": "Início",
@@ -8,9 +8,9 @@
       "entities": {
         "main": "Entidades",
         "address": "Address",
-        "product": "Product",
+        "product": "Produtos",
         "review": "Review",
-        "order": "Order",
+        "order": "Pedidos",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

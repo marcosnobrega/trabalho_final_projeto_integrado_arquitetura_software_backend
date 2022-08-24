@@ -1,7 +1,7 @@
 {
   "home": {
-    "title": "Welcome to Ollen!",
-    "subtitle": "This is the Ollen administrative panel",
+    "title": "Welcome to Øllen!",
+    "subtitle": "This is the Øllen administrative panel",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     }

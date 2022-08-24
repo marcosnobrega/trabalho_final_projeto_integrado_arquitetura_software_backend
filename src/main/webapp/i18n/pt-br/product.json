@@ -2,30 +2,30 @@
   "ollenApp": {
     "product": {
       "home": {
-        "title": "Products",
+        "title": "Produtos",
         "refreshListLabel": "Atualizar lista",
-        "createLabel": "Criar novo Product",
-        "createOrEditLabel": "Criar ou editar Product",
-        "notFound": "Nenhum Product encontrado"
+        "createLabel": "Criar novo produto",
+        "createOrEditLabel": "Criar ou editar produto",
+        "notFound": "Nenhum produto encontrado"
       },
-      "created": "Um novo Product foi criado com o identificador {{ param }}",
-      "updated": "Um Product foi atualizado com o identificador {{ param }}",
-      "deleted": "Um Product foi excluído com o identificador {{ param }}",
+      "created": "Um novo produto foi criado com o identificador {{ param }}",
+      "updated": "Um produto foi atualizado com o identificador {{ param }}",
+      "deleted": "Um produto foi excluído com o identificador {{ param }}",
       "delete": {
-        "question": "Tem certeza de que deseja excluir Product {{ id }}?"
+        "question": "Tem certeza de que deseja excluir produto {{ id }}?"
       },
       "detail": {
-        "title": "Product"
+        "title": "Produto"
       },
       "id": "ID",
-      "name": "Name",
-      "description": "Description",
-      "price": "Price",
-      "stock": "Stock",
-      "image": "Image",
-      "producer": "Producer",
-      "order": "Order",
-      "review": "Review"
+      "name": "Nome",
+      "description": "Descrição",
+      "price": "Preço",
+      "stock": "Estoque",
+      "image": "Imagem",
+      "producer": "Produtor",
+      "order": "Pedido",
+      "review": "Avaliação"
     }
   }
 }
