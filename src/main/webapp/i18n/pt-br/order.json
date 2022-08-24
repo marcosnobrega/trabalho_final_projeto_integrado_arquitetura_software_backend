@@ -2,25 +2,25 @@
   "ollenApp": {
     "order": {
       "home": {
-        "title": "Orders",
+        "title": "Pedidos",
         "refreshListLabel": "Atualizar lista",
-        "createLabel": "Criar novo Order",
-        "createOrEditLabel": "Criar ou editar Order",
-        "notFound": "Nenhum Order encontrado"
+        "createLabel": "Criar novo pedido",
+        "createOrEditLabel": "Criar ou editar pedido",
+        "notFound": "Nenhum pedido encontrado"
       },
-      "created": "Um novo Order foi criado com o identificador {{ param }}",
-      "updated": "Um Order foi atualizado com o identificador {{ param }}",
-      "deleted": "Um Order foi excluído com o identificador {{ param }}",
+      "created": "Um novo pedido foi criado com o identificador {{ param }}",
+      "updated": "Um pedido foi atualizado com o identificador {{ param }}",
+      "deleted": "Um pedido foi excluído com o identificador {{ param }}",
       "delete": {
-        "question": "Tem certeza de que deseja excluir Order {{ id }}?"
+        "question": "Tem certeza de que deseja excluir pedido {{ id }}?"
       },
       "detail": {
-        "title": "Order"
+        "title": "Pedido"
       },
       "id": "ID",
-      "date": "Date",
-      "amount": "Amount",
-      "product": "Product"
+      "date": "Data",
+      "amount": "Valor",
+      "product": "Produtos"
     }
   }
 }
