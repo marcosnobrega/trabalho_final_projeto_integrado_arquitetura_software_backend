@@ -2,6 +2,8 @@
 
 https://user-images.githubusercontent.com/775225/186301862-5fcadb5f-ad9c-444e-af2d-fd82e2aa6d71.mp4
 
+https://user-images.githubusercontent.com/35736027/185259319-1b89d481-c37b-4bc7-addb-6213383f1e5e.mp4
+
 # Trabalho Final da disciplina de Projeto Integrado de Arquitetura de Software Distribuído no curso de pós-graduação de Arquitetura de Software Distribuído da PUC-MG
 
 ## Integrantes
